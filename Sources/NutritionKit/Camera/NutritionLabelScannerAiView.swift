@@ -4,7 +4,7 @@ import SwiftUI
 import Toolbox
 
 public struct NutritionLabelScannerAiView: View {
-    @Binding var image: UIImage
+    @Binding var image: UIImage?
     @Environment(\.presentationMode) var presentationMode
     
     /// Whether we're currently processing an image.
