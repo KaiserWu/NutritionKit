@@ -7,11 +7,12 @@ public struct NutritionLabelScannerAiView: View {
     @Binding var image: UIImage?
     @Environment(\.presentationMode) var presentationMode
     
-    /// Whether we're currently processing an image.
-    @State var isProcessingImage: Bool = false
-    
     /// The cutout rectangle.
     @State var cameraRectangle: CameraRect = DefaultCameraOverlayView.defaultLabelCutoutRect
+    
+    public init(image: Binding<UIImage?>) {
+        self._image = image
+    }
     
     func reset() {
         self.resetCameraCutout()
